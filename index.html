@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Gerador de Senhas, gerador passaword">
+    <title>Gerador de Senhas</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container-input">
+
+        <h1>Gerador de Senhas</h1>
+
+        <input class="entradaDados" id="tamanhoSenha" type="number" min="5" max="20" oninput="tamanhoSenha(this.value)">
+        <p class="entrada">Tamanho da Senha (de 5 a 20 caracteres)</p>
+
+        <input class=" entradaDados" id="qtddSenha" type="number" min="1" max="10">
+        <p class="entrada">Quantidade de senha (max 10)</p>
+
+        <button class="btnSenha" id="btnGerar" onclick="gerarSenhas()">Gerar Senha</button>
+
+        <ul>
+            <li class="linha_checkbox"><input class="classCheck" id="gerarMaiChars" type="checkbox">Letras Maiúsculas</li>
+            <li class="linha_checkbox"><input class="classCheck" id="gerarNum" type="checkbox">Números</li>
+            <li class="linha_checkbox"><input class="classCheck" id="gerarSpChars" type="checkbox">Caracteres Especiais</li>
+        </ul>
+        <br>
+        <textarea id="receberSenhas" cols="40" rows="10"></textarea>
+        <br>
+        <button class="btnSenha" id="btnLimpar" onclick="limparSenha()">Limpar Senha</button>
+  
+
+    </div>
+
+    <script src="js/geradorSenha.js"></script>
+</body>
+
+</html>
